@@ -10,47 +10,55 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <style>
-      .section-kis {
-      background-color: #dd312c;
-      }
-      .section-header {
-      background: url('https://dummyimage.com/1980x371/d3d3d3/e3e3e3') no-repeat center;
-      }
-      .section-nav-tabs {
-      padding-top: 0;
-      padding-bottom: 0;
-      }
-      .col-centered {
-      float: none;
-      margin: 0 auto;
-      text-align: center;
-      width: 100%;
-      }
-      .container {
-      max-width: 940px;
-      }
-      .jumbotron {
-      background: none;
-      }
-      .hide-reveal {
-      font-size: 24px;
-      }
-      .icon-adjust {
-      margin-left: 10px;
-      }
-      .btn-text-left {
-        text-align: left;
-      }
-      .btn-group-vertical-custom {
-      position: relative;
-      display: block;
-      vertical-align: middle;
-      box-sizing: border-box;
-      }
-      .btn-custom {
-      white-space: pre-wrap;
-      display: block;
-      }
+     .section-kis {
+     background-color: #dd312c;
+     }
+     .section-header {
+     background: url('https://dummyimage.com/1980x371/d3d3d3/e3e3e3') no-repeat center;
+     }
+     .section-nav-tabs {
+     padding-top: 0;
+     padding-bottom: 0;
+     }
+     .col-centered {
+     float: none;
+     margin: 0 auto;
+     text-align: center;
+     width: 100%;
+     }
+     .container {
+     max-width: 940px;
+     }
+     .jumbotron {
+     background: none;
+     }
+     .hide-reveal {
+     font-size: 24px;
+     }
+     .icon-adjust {
+     margin-left: 10px;
+     }
+     .btn-text-left {
+     text-align: left;
+     }
+     .btn-group-vertical-custom {
+     position: relative;
+     display: block;
+     vertical-align: middle;
+     box-sizing: border-box;
+     }
+     .btn-custom {
+     white-space: pre-wrap;
+     display: block;
+     }
+     #mobile-tab-header {
+     float: left;
+     margin-top: 4px;
+     padding-right: 15px;
+     }
+     #example-navbar-collapse {
+     float: left;
+     }
   </style>
   <title></title>
 </head>
@@ -73,28 +81,52 @@
       </div>
     </div>
   </div>
+  <div class="dropdown visible-xs">
+    <button aria-expanded="true" aria-haspopup="true" class="btn btn-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Overview <span class="caret"></span></button>
+    <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+      <li class="active">
+        <a data-toggle="tab" href="#overview">Overview</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#course">Course structure</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#entry">Entry requirements</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#career">Career prospects</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#fees">Fees and funding</a>
+      </li>
+    </ul>
+  </div>
   <div class="section section-nav-tabs">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <ul class="nav nav-tabs">
-            <li class="active">
-              <a data-toggle="tab" href="#overview">Overview</a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#course">Course structure</a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#entry">Entry requirements</a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#career">Career prospects</a>
-            </li>
-            <li>
-              <a data-toggle="tab" href="#fees">Fees and funding</a>
-            </li>
-          </ul>
-        </div>
+        <nav class="navbar navbar-default hidden-xs">
+          <div class="container-fluid">
+            
+              <ul class="nav navbar-nav">
+                <li class="active">
+                  <a data-toggle="tab" href="#overview">Overview</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#course">Course structure</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#entry">Entry requirements</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#career">Career prospects</a>
+                </li>
+                <li>
+                  <a data-toggle="tab" href="#fees">Fees and funding</a>
+                </li>
+              </ul>
+            
+          </div>
+        </nav>
       </div>
     </div>
   </div>
@@ -286,7 +318,6 @@
                 </ul>
               </div><a class="btn btn-custom btn-text-left hide-reveal" data-target="#teaching" data-toggle="collapse">Teaching contact <nobr>hours<i class="fa fa-angle-right fa-2x icon-adjust"></i></nobr></a>
               <div class="collapse container" id="teaching">
-
                 <p>In a typical teaching week, you will have up to 18 ‘contact’ hours of teaching. This generally breaks down as:</p>
                 <ul>
                   <li>Personal tutorial/small group teaching: 6 hours of workshops/online tutorials each week.</li>
@@ -296,7 +327,6 @@
                     <p>In addition, you will be expected to undertake a further 18 hours of self-directed study each week eg. revising.</p>
                   </li>
                 </ul>
-
               </div><a class="btn btn-custom btn-text-left hide-reveal" data-target="#experience" data-toggle="collapse">International experience <nobr>opportunities<i class="fa fa-angle-right fa-2x icon-adjust"></i></nobr></a>
               <div class="collapse container" id="experience">
                 <p>Our sandwich degree option allows a full year work placement, which can be taken abroad, or you can undertake a study year abroad. A number of students in our department have been successful in securing places to study in Spain, France, Canada and the US.</p>
