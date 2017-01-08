@@ -12,17 +12,29 @@
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <style>
+    .section-alt {
+      background-color: dimgrey;
+      color: white;
+    }
      .section-kis {
      background-color: #dd312c;
      }
+     .panel-title > a {
+      display: block;
+      width: 100%;
+     }
      .section-header {
-     background: url('https://dummyimage.com/1980x371/d3d3d3/e3e3e3') no-repeat center;
+     background: url('http://placehold.it/1980?text=IMAGE') no-repeat center;
      }
      .section-nav-tabs {
-     padding-top: 0;
-     padding-bottom: 0;
+     padding: 0;
+     border-top: solid 1px lightgrey;
+     border-bottom: solid 1px lightgrey;
      }
-     .section-key-facts {
+     .section-nav-tabs a {
+     color: black;
+     }
+      .section-key-info {
      padding-top: 0;
      padding-bottom: 0;
      }
@@ -59,6 +71,13 @@
      white-space: pre-wrap;
      display: block;
      }
+     .btn-cta {
+      background-color: dimgrey;
+      color: white;
+     }
+     .section-cta {
+      padding: 15px 0 0 0;
+     }
      #mobile-tab-header {
      float: left;
      margin-top: 4px;
@@ -81,6 +100,9 @@
       border-radius: 0;
       padding: 0;
      }
+     .panel-default {
+      border: none;
+     }
      .navbar {
       border: none;
       border-radius: 0;
@@ -89,7 +111,12 @@
       border: none;
       border-radius: 0;
      }
-
+     .panel-selector {
+      display: none;
+     }
+     .panel-default:first-child .panel-heading {
+      display: none;
+     }
      @media (min-width: 768px){
     .navbar-nav {
         margin: 0 auto;
@@ -101,16 +128,42 @@
     .navbar-nav>li {
         display: table-cell;
         float: none;
-        text-align: left;
+        text-align: center;
       }
+    .section-nav-tabs .container {
+     padding-left: 0;
+     padding-bottom: 0;
+     }
     }
-    #key-facts {
-      margin: 20px 0;
+    .key-info {
       padding: 10px;
       border: solid 1px lightgrey;
     }
+    #key-info-mobile {
+      margin: 15px 0;
+    }
+    #key-info-mobile h3 {
+      margin-top: 0;
+    }
+    #key-info-desktop {
+      margin-bottom: 15px;
+    }
     .btn:active {
       -webkit-box-shadow: none;
+    }
+    .btn {
+      margin-bottom: 2px;
+    }
+    @media (max-width: 767px){
+      .section-header {
+        padding: 0;
+      }
+      .jumbotron {
+        padding: 15px;
+      }
+      h2 {
+        margin-top: 0px;
+      }
     }
   </style>
   <title></title>
@@ -126,17 +179,62 @@
             <p>Course code: 12345</p>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-3">
+        <div class="col-xs-12 col-sm-3 hidden-xs">
           <div class="btn-group-vertical">
-            <a class="btn btn-primary" href="http://www.coventry.ac.uk/applyforthiscourse-o/">Apply for this course</a> <a class="btn btn-primary" href="http://www.coventry.ac.uk/order-a-prospectus/">Order a prospectus</a> <a class="btn btn-primary" href="#contact-section">Contact us</a>
-            <a class="btn btn-primary" href="#">Auxilary button</a>
+            <a class="btn btn-cta" href="http://www.coventry.ac.uk/applyforthiscourse-o/">Apply for this course</a>
+            <a class="btn btn-cta" href="http://www.coventry.ac.uk/order-a-prospectus/">Order a prospectus</a>
+            <a class="btn btn-cta" href="#contact-section">Contact us</a>
+            <a class="btn btn-cta" href="#">Auxilary button</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="section section-key-facts visible-xs">
-    <div class="container" id="key-facts-mobile">
+  <div class="section section-cta visible-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="">
+              <a class="btn btn-cta" href="http://www.coventry.ac.uk/applyforthiscourse-o/">Apply for this course</a>
+              <a class="btn btn-cta" href="http://www.coventry.ac.uk/order-a-prospectus/">Order a prospectus</a>
+              <a class="btn btn-cta" href="#contact-section">Contact us</a>
+              <a class="btn btn-cta" href="#">Auxilary button</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-key-info visible-xs">
+    <div class="container" id="key-info-mobile">
+      <div class="key-info" class="">
+            <div class="row">
+              <div class="col-xs-12">
+                <h3>Key information</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-3">
+                <p><strong>Starts</strong></p>
+                <p>January 2017<br>
+                September 2017</p>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <p><strong>Fees</strong></p>
+                <p>£9250</p>
+              </div>
+              <div class="clearfix visible-xs"></div>
+              <div class="col-xs-6 col-sm-3">
+                <p><strong>Study options</strong></p>
+                <p>3 years (full time)<br>
+                4 years (full time)<br>
+                5 years (part time)</p>
+              </div>
+              <div class="col-xs-6 col-sm-3">
+                <p><strong>Location</strong></p>
+                <p>Coventry</p>
+              </div>
+            </div>
+          </div>
     </div>
   </div>
   <div class="section section-nav-tabs">
@@ -144,11 +242,11 @@
       <div class="row">
         <nav class="navbar">
               <ul class="nav navbar-nav" id="myTab">
-                <li class="">
+                <li class="active">
                   <a data-toggle="tab" href="#overview">Overview</a>
                 </li>
                 <li>
-                  <a data-toggle="tab" href="#course">Course structure</a>
+                  <a data-toggle="tab" href="#course">Course details</a>
                 </li>
                 <li>
                   <a data-toggle="tab" href="#entry">Entry requirements</a>
@@ -165,7 +263,7 @@
     </div>
   </div>
   <div class="tab-content">
-    <div class="tab-pane fade in" id="overview">
+    <div class="tab-pane active fade in" id="overview">
       <div class="section">
         <div class="container">
           <div class="row">
@@ -173,30 +271,28 @@
               <h2>Overview</h2>
             </div><!-- end of column -->
           </div><!-- end of row -->
-          <div id="key-facts">
+          <div class="key-info hidden-xs" id="key-info-desktop">
             <div class="row">
               <div class="col-xs-12">
-                <h3>Key facts</h3>
+                <h3>Key information</h3>
               </div>
             </div>
-            
             <div class="row">
               <div class="col-xs-6 col-sm-3">
                 <p><strong>Starts</strong></p>
-                <p>January 2017</p>
-                <p>September 2017</p>
+                <p>January 2017<br>
+                September 2017</p>
               </div>
               <div class="col-xs-6 col-sm-3">
                 <p><strong>Fees</strong></p>
                 <p>£9250</p>
-                <p></p>
               </div>
               <div class="clearfix visible-xs"></div>
               <div class="col-xs-6 col-sm-3">
                 <p><strong>Study options</strong></p>
-                <p>3 years (full time)</p>
-                <p>4 years (full time)</p>
-                <p>5 years (part time)</p>
+                <p>3 years (full time)<br>
+                4 years (full time)<br>
+                5 years (part time)</p>
               </div>
               <div class="col-xs-6 col-sm-3">
                 <p><strong>Location</strong></p>
@@ -204,71 +300,12 @@
               </div>
             </div>
           </div>
-
-              <!--<table class="table-condensed" id="key-facts-table">
-                <tbody>
-                  <tr>
-                    <td><i class="fa fa-fw fa-book"></i></td>
-                    <td><strong>Study options</strong></td>
-                    <td><i class="fa fa-fw fa-calendar"></i></td>
-                    <td><strong>Starts</strong></td>
-                    <td><i class="fa fa-fw fa-location-arrow"></i></td>
-                    <td><strong>Location</strong></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>3 years (full time)</td>
-                    <td></td>
-                    <td>January 2017</td>
-                    <td></td>
-                    <td>Coventry</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>4 years (full time)</td>
-                    <td></td>
-                    <td>September 2017</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>5 years (part time)</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>-->
-
           <div class="row">
             <div class="col-xs-12">
               <p>This exciting course blends the study of human biology with the rigorous techniques used in forensic laboratories, including analysis of blood, fibres, fingerprints, drugs, documents, DNA and fire/explosives residue. Ideal if you are fascinated by the scientific investigation of crime.</p>
               <p>We adopt a ‘Crime Scene to Court’ approach to their teaching, which really helps you to understand forensics, in particular the need to methodically collect samples, analyse them and present the results to the standard required by the courts.</p>
               <p>You can also engage in multiple placement opportunities, the chance to conduct research alongside our experienced staff or the many professional organisations we have links with – such as Leicester Royal Infirmary, Key Forensic Services Ltd, Nemaura Pharmaceuticals Ltd and West Midlands Police.</p>
-              <h3>Why choose this course?</h3>
-              <p>If you are fascinated with human biology and the scientific investigation of crime, our degree will enable you to learn all about human physiology, biochemistry, molecular biology/genetics, microbiology and how each of these disciplines can be applied in forensic science.</p>
-              <p>You’ll be based in our new state-of-the-art £37 million Science and Health Building, which provides an outstanding learning and research environment, which features a video-linked ‘crime scene’ house, outstanding analytical laboratory facilities and the largest Class II containment teaching laboratory in Europe, specifically designed to accommodate microbiology, cell culture, molecular biology/genetics, biochemistry and forensic science.</p>
-              <p>You’ll be taught by our experienced staff, many of whom bring professional or research expertise to their teaching. They have held roles as quality assurance managers in major pharmaceuticals companies, such as GSK and British Biotech, as forensic scientists in the Forensic Science Service or as analytical scientists in government laboratories. They continue to provide consultancy and expert commentary in areas of safety and efficacy testing for the BBC, most recently on illegal skin bleaching products on sale in the UK.</p>
-              <p>Coventry has an excellent reputation for evidence-based scientific research; our faculty possess expertise and have published in biochemistry, cell biology, genomic and molecular biology, microbiology, pharmacology and physiology. In your final year, you have the opportunity to collaborate on a research project, which in the past has led to students winning prizes at the Forensic Institute Research Network (FIRN) Midlands regional conference, attend the international Forensic Research and Teaching (FORREST) conference and publish articles in academic journals.</p>
-              <p>Throughout your studies, you will find that the course is underpinned with practical experience. Laboratory sessions will help to develop the practical skills needed for a career in a variety of biology and forensic roles. You will learn key experimental techniques and develop essential experimental, data handling, reporting and broader scientific skills, such as literature researching, information technology, bioinformatics, data processing and the use of statistics.</p>
-              <p>You’ll have the opportunity to undertake short and long-term placements. Previously students have worked on revolutionary technologies for Cambridge Scientific Solutions, such as the removal of biofilm formations which foul beer lines in pubs, or the formulation of drug products for transdermal patch applications for Nemaura Pharmaceuticals.</p>
-              <p>In your final year, we tackle a simulated investigation to solve a ‘real-world’ problem, which involves the production of an expert witness statement and culminates in the presentation of evidence in a mock courtroom scenario. You could find yourself being called upon to establish whether the glass found on a suspect’s jumper indicates that he was implicated in smashing a window at an alleged burglary scene or whether blood found on he broken window matches the DNA profile of the suspect’s blood. Other scenarios include an assessment of whether the paint found on a suspect’s keys matches the paint from a damaged vehicle and an assessment of the significance of this match.</p>
-              <h3>Benefits</h3>
-              <ul>
-                <li>Coventry is rated 19th best in the UK for Biosciences in the Guardian University Guide 2017.</li>
-                <li>Based in new £37 million state-of-the-art Science and Health Building provides facilities for teaching and research, featuring largest Class II containment teaching lab in Europe; state-of-the-art analytical chemistry laboratory; video linked ‘crime-scene’ house.</li>
-                <li>Hands-on experience of a wide range of laboratory technique techniques such as gene amplification using PCR, gene sequencing, cell culture, flow cytometry, tissue staining, protein detection and bacterial growth in our modern, well-equipped laboratories.</li>
-                <li>Scene of crime outfit, basic fingerprint kit, laboratory coat and safety spectacles provided for use.</li>
-                <li>Free student membership of The Chartered Society of Forensic Science for final year students.</li>
-                <li>Many of our staff professionally recognised as accredited Biomedical Scientists by the Institute of Biomedical Science (IBMS); Chartered Chemists by the Royal Society of Chemistry (RSC), Chartered Biologists by the Royal Society of Biology (RSB) and are professional members of the Chartered Society of Forensic Sciences (CSFS).</li>
-                <li>Strong network of professional agencies and potential employers and excellent research links with Key Forensic Services Ltd and LGC Forensics Ltd, whose practising forensic scientists provide guest lectures and workshops to help students prepare themselves for the real-world experience of forensic science, as well as specific topics for final year research projects.</li>
-                <li>Regular guest speakers have included: Derek Forrest OBE, Interpol’s lead on Disaster Victim Identification; a former student now working as a DNA analyst and a forensic scientist with many years’ experience of presenting evidence in court.</li>
-                <li>Support applying for short and long-term placements in laboratory and industrial settings to gain the experience employers desire. Past students have taken secondary school students on field trips to the science museum in London and developed forensic science teaching resources.</li>
-              </ul>
-              <h3>Professional membership and accreditation</h3>
-              <p>Student Membership of the Chartered Society of Forensic Sciences (CSFS) is provided free-of-charge for all final year students. Many of our staff are professionally recognised as accredited Biomedical Scientists by the Institute of Biomedical Science (IBMS); Chartered Chemists by the Royal Society of Chemistry (RSC), Chartered Biologists by the Royal Society of Biology (RSB) and are professional members of the Chartered Society of Forensic Sciences (CSFS).</p>
+              
             </div><!-- end of column -->
           </div><!-- end of row -->
         </div><!-- end of container -->
@@ -279,7 +316,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <h2>Course structure</h2>
+              <h2>Course details</h2>
             </div><!-- end of column -->
           </div><!-- end of row -->
           <div class="row">
@@ -351,6 +388,28 @@
                 <li>Applied Human Genetics</li>
               </ul>
               <p>Please note that the modules listed above are correct at the time of going to print. However, changes may occur and we strongly advise you to contact us before applying to study at Coventry University and check the most up-to-date position on our website. This document is not intended to form part of any contract between Coventry University and yourself and should not be relied upon when making an application to study here. A compulsory Add+vantage module must also be completed in each year of study, please see below for more information on our Add+vantage scheme.</p>
+              <h3>Why choose this course?</h3>
+              <p>If you are fascinated with human biology and the scientific investigation of crime, our degree will enable you to learn all about human physiology, biochemistry, molecular biology/genetics, microbiology and how each of these disciplines can be applied in forensic science.</p>
+              <p>You’ll be based in our new state-of-the-art £37 million Science and Health Building, which provides an outstanding learning and research environment, which features a video-linked ‘crime scene’ house, outstanding analytical laboratory facilities and the largest Class II containment teaching laboratory in Europe, specifically designed to accommodate microbiology, cell culture, molecular biology/genetics, biochemistry and forensic science.</p>
+              <p>You’ll be taught by our experienced staff, many of whom bring professional or research expertise to their teaching. They have held roles as quality assurance managers in major pharmaceuticals companies, such as GSK and British Biotech, as forensic scientists in the Forensic Science Service or as analytical scientists in government laboratories. They continue to provide consultancy and expert commentary in areas of safety and efficacy testing for the BBC, most recently on illegal skin bleaching products on sale in the UK.</p>
+              <p>Coventry has an excellent reputation for evidence-based scientific research; our faculty possess expertise and have published in biochemistry, cell biology, genomic and molecular biology, microbiology, pharmacology and physiology. In your final year, you have the opportunity to collaborate on a research project, which in the past has led to students winning prizes at the Forensic Institute Research Network (FIRN) Midlands regional conference, attend the international Forensic Research and Teaching (FORREST) conference and publish articles in academic journals.</p>
+              <p>Throughout your studies, you will find that the course is underpinned with practical experience. Laboratory sessions will help to develop the practical skills needed for a career in a variety of biology and forensic roles. You will learn key experimental techniques and develop essential experimental, data handling, reporting and broader scientific skills, such as literature researching, information technology, bioinformatics, data processing and the use of statistics.</p>
+              <p>You’ll have the opportunity to undertake short and long-term placements. Previously students have worked on revolutionary technologies for Cambridge Scientific Solutions, such as the removal of biofilm formations which foul beer lines in pubs, or the formulation of drug products for transdermal patch applications for Nemaura Pharmaceuticals.</p>
+              <p>In your final year, we tackle a simulated investigation to solve a ‘real-world’ problem, which involves the production of an expert witness statement and culminates in the presentation of evidence in a mock courtroom scenario. You could find yourself being called upon to establish whether the glass found on a suspect’s jumper indicates that he was implicated in smashing a window at an alleged burglary scene or whether blood found on he broken window matches the DNA profile of the suspect’s blood. Other scenarios include an assessment of whether the paint found on a suspect’s keys matches the paint from a damaged vehicle and an assessment of the significance of this match.</p>
+              <h3>Benefits</h3>
+              <ul>
+                <li>Coventry is rated 19th best in the UK for Biosciences in the Guardian University Guide 2017.</li>
+                <li>Based in new £37 million state-of-the-art Science and Health Building provides facilities for teaching and research, featuring largest Class II containment teaching lab in Europe; state-of-the-art analytical chemistry laboratory; video linked ‘crime-scene’ house.</li>
+                <li>Hands-on experience of a wide range of laboratory technique techniques such as gene amplification using PCR, gene sequencing, cell culture, flow cytometry, tissue staining, protein detection and bacterial growth in our modern, well-equipped laboratories.</li>
+                <li>Scene of crime outfit, basic fingerprint kit, laboratory coat and safety spectacles provided for use.</li>
+                <li>Free student membership of The Chartered Society of Forensic Science for final year students.</li>
+                <li>Many of our staff professionally recognised as accredited Biomedical Scientists by the Institute of Biomedical Science (IBMS); Chartered Chemists by the Royal Society of Chemistry (RSC), Chartered Biologists by the Royal Society of Biology (RSB) and are professional members of the Chartered Society of Forensic Sciences (CSFS).</li>
+                <li>Strong network of professional agencies and potential employers and excellent research links with Key Forensic Services Ltd and LGC Forensics Ltd, whose practising forensic scientists provide guest lectures and workshops to help students prepare themselves for the real-world experience of forensic science, as well as specific topics for final year research projects.</li>
+                <li>Regular guest speakers have included: Derek Forrest OBE, Interpol’s lead on Disaster Victim Identification; a former student now working as a DNA analyst and a forensic scientist with many years’ experience of presenting evidence in court.</li>
+                <li>Support applying for short and long-term placements in laboratory and industrial settings to gain the experience employers desire. Past students have taken secondary school students on field trips to the science museum in London and developed forensic science teaching resources.</li>
+              </ul>
+              <h3>Professional membership and accreditation</h3>
+              <p>Student Membership of the Chartered Society of Forensic Sciences (CSFS) is provided free-of-charge for all final year students. Many of our staff are professionally recognised as accredited Biomedical Scientists by the Institute of Biomedical Science (IBMS); Chartered Chemists by the Royal Society of Chemistry (RSC), Chartered Biologists by the Royal Society of Biology (RSB) and are professional members of the Chartered Society of Forensic Sciences (CSFS).</p>
             </div><!-- end of column -->
           </div><!-- end of row -->
           <div class="row">
@@ -478,7 +537,7 @@
       </div><!-- end of section -->
     </div><!-- end of tab-pane -->
   </div><!-- end of tab-content -->
-  <div class="section section-primary">
+  <div class="section section-alt">
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-sm-push-6">
@@ -490,7 +549,7 @@
             </footer>
           </blockquote>
         </div>
-        <div class="col-sm-6 col-sm-pull-6"><img class="img-responsive" src="https://dummyimage.com/400x300/d3d3d3/e3e3e3"></div>
+        <div class="col-sm-6 col-sm-pull-6"><img class="img-responsive" src="http://placehold.it/400?text=IMAGE"></div>
       </div>
     </div>
   </div>
@@ -508,7 +567,7 @@
       </div>
     </div>
   </div>
-  <div class="section section-primary" id="contact-section">
+  <div class="section section-alt" id="contact-section">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -523,14 +582,6 @@
     </div>
   </div>
 <script>
-$(function () {
-  if ($(window).width() < 768) {
-   $("#key-facts").appendTo( $( "#key-facts-mobile") );
-  } else {
-    $("#myTab").addClass('active')
-    $("#overview").addClass('active')
-  }
-})
 $('#myTab').tabCollapse();
 </script>
 </body>
